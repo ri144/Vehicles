@@ -6,14 +6,14 @@ public class CarApp {
 		car1.start();
 		System.out.print(car1.accelerate());
 		System.out.print(car1.setSpeed(50));
-		car1.stop();
+		System.out.print(car1.stop());
 		car1.start();
 		car2.start();
-		car1.accelerate();
-		car2.accelerate();
+		System.out.print(car1.accelerate());
+		System.out.print(car2.accelerate());
 		car2.emissionCheck();
 		System.out.print(car1.setSpeed(50));
-		car1.stop();
+		System.out.print(car1.stop());
 		car1.race(car2);
 	}
 }

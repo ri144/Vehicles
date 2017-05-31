@@ -1,5 +1,5 @@
 
-public class Car extends Vehicle{
+public final class Car extends Vehicle{
 	private String carType;
 	private String carColor;
 	private int carSpeed;
@@ -15,6 +15,7 @@ public class Car extends Vehicle{
 		carColor = inputColor;
 		carSpeed = inSpeed;
 	}
+	@Override
 	public String accelerate(){
 		return ("The " + carColor + " " + carType + " is accelerating\n");
 	}
@@ -25,9 +26,10 @@ public class Car extends Vehicle{
 		carSpeed = speed;
 		return ("The " + carColor + " " + carType + " is going " + Integer.toString(speed) + " mph\n");
 	}
-	public void stop(){
+	@Override
+	public String stop(){
 		carSpeed = 0;
-		System.out.printf("The %s %s is stopped\n",carColor, carType);
+		return "The " + carColor + " " + carType + " is stopped\n";
 	}
 	public void setType(String intype){
 		carType = intype;
