@@ -15,15 +15,15 @@ public class Car extends Vehicle{
 		carColor = inputColor;
 		carSpeed = inSpeed;
 	}
-	public void accelerate(){
-		System.out.printf("The %s %s is accelerating\n",carColor, carType);
+	public String accelerate(){
+		return ("The " + carColor + " " + carType + " is accelerating\n");
 	}
 	public void start(){
 		System.out.printf("The %s %s is starting\n",carColor, carType);
 	}
-	public void setSpeed(int speed){
+	public String setSpeed(int speed){
 		carSpeed = speed;
-		System.out.printf("The %s %s is going %d mph\n",carColor, carType, speed);
+		return ("The " + carColor + " " + carType + " is going " + Integer.toString(speed) + " mph\n");
 	}
 	public void stop(){
 		carSpeed = 0;
