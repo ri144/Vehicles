@@ -15,5 +15,6 @@ public class CarApp {
 		System.out.print(car1.setSpeed(50));
 		System.out.print(car1.stop());
 		car1.race(car2);
+		car1.whoDrive();
 	}
 }

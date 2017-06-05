@@ -3,6 +3,7 @@ public final class Car extends Vehicle{
 	private String carType;
 	private String carColor;
 	private int carSpeed;
+	private Driver d = new Driver("Bob");
 	public Car(){
 		super();
 		carType = "Porsche";
@@ -60,5 +61,9 @@ public final class Car extends Vehicle{
 		else{
 			System.out.printf("The %s %s just passed the %s %s\n", otherCar.carColor, otherCar.carType, carColor, carType);
 		}
+	}
+	public void whoDrive() {
+		// TODO Auto-generated method stub
+		System.out.printf("The %s %s is being driven by %s\n", carColor, carType, d.getName());
 	}
 }
